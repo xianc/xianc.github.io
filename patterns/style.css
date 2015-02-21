@@ -1,0 +1,414 @@
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+
+/* General */
+body{
+    background: #eceaeb;
+    margin:0;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+ul, li{
+    margin:0;
+    padding:0;
+}
+
+
+/* Header */
+header{
+    width: 100%;
+    height: 75px;
+    background: #292828;
+}
+
+header .titleText{
+    margin-top: 28px;
+    float: left;
+    font-size: 18pt;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+header .titleText a{
+    text-decoration: none;
+    color:#fff;
+}
+
+header nav{
+    float: right;
+}
+
+
+/* Header Nav */
+header nav ul{
+    margin-top: 30px;
+    list-style: none;
+    overflow: hidden;
+    float: left;
+}
+
+header nav ul li{
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+
+/* Header hamburger */
+header .hamburger{
+    margin-top: 32px;
+    background: url('img/hamburger_icon.png') no-repeat;
+    width: 24px;
+    height: 19px;
+    float: right;
+    display: none;
+}
+
+
+/* Jumbotron */
+.jumbotron{
+    position: relative;
+    background: url('img/head.png') no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    height: 660px;
+}
+
+.jumbotron .tagLine{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    z-index: 1000;
+    margin-top:-10%;
+}
+
+.jumbotron .tagLine h2{
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    font-weight: lighter;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+
+.jumbotron .tagLine h3{
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin: -25px 0px 0px 275px;
+    left: 1px;
+    letter-spacing: 1px;
+}
+
+
+/* Patterns */
+.patterns{
+    padding: 100px 0px 100px 0px;
+}
+
+.patterns .patternList{
+    list-style: none;
+    overflow: hidden;
+}
+
+.patterns .patternList li{
+    display: block;
+    width: 31%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0 3% 3% 0;
+}
+
+.patterns .patternList .patternThumb{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+
+    -webkit-filter: grayscale(100%);
+    filter: gray; filter: grayscale(100%);
+    filter: url(desaturate.svg#greyscale)
+
+    -o-transition:.5s ease-in;
+    -ms-transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+}
+
+.patterns .patternList .patternThumb:hover{
+    filter:none;
+    -webkit-filter: grayscale(0%);
+
+    -o-transition:.5s ease-in;
+    -ms-transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+}
+
+.patterns .patternList li:nth-child(3n){
+    margin-right: 0;
+}
+
+.patterns .patternInfo{
+    width: 100;
+    padding: 10px;
+}
+
+.patterns .patternInfo h1{
+    line-height: 20px;
+    color: #292828;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 2px 0px 10px 0px;
+}
+
+.patterns .patternInfo h2{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7c7b7b;
+}
+
+.patterns .patternInfo a{
+    text-decoration: none;
+    color: #565555;
+    -moz-transition:color .2s ease-in8
+    -o-transition:color .2s ease-in;
+    -webkit-transition:color .2s ease-in;
+}
+
+.patterns .patternInfo a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.patterns .morePatterns{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 60px 0px 10px 0px;
+}
+
+.patterns .morePatterns_btn{
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #292828;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+
+    -o-transition:.5s ease-in;
+    -ms-transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+}
+
+
+/* Content2 */
+.content2{
+    padding: 100px 0px 100px 0px;
+    background-color: #0f1312;
+    text-align: center;
+
+    position: relative;
+    background: url('img/body.png') no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+}
+
+.content2 h1{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#f9f8f8;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom:20px;
+}
+.content2, .content2 h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;  
+    color: #eeeded; 
+    line-height: 25px;
+    letter-spacing: 1px; 
+}
+
+/* Content2 Button */
+.content2 .c2btn{
+    margin:65px 0px 30px 0px;
+    text-align: center;
+}
+.content2 .c2btn .btn{
+    background-color: #7c7b7b;
+    padding: 10px;
+
+    font-family: 'Lato', sans-serif;
+    color: #eeeded;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    border: 2px solid #eeeded;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    -o-transition:.2s ease-in;
+    -ms-transition:.2s ease-in;
+    -moz-transition:.2s ease-in;
+    -webkit-transition:.2s ease-in;
+
+}
+
+.content2 .c2btn .btn:hover{
+    color: #292828;
+    border: 2px solid #292828;    
+}
+
+footer{
+    width:100%;
+    height:50px;
+    background-color: #292828;
+}
+
+footer .container{
+    padding-top: 18px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #eeeded;
+    letter-spacing: 2px;
+}
+
+
+/* Responsive */
+@media (max-width: 1150px){
+    .container{
+        padding: 0 40px 0px 40px;
+        max-width: 1020px;
+    }
+
+    .jumbotron .tagLine{
+        margin-top:-8%;
+    }
+
+}
+
+@media (max-width:800px){
+    header a.hamburger{
+        display: block;
+    }
+
+    header nav{
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        float: none;
+        z-index: 1000;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    header nav.active{
+        opacity: 1;
+    }
+
+    header nav ul{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    header nav ul li{
+        display: block;
+        float: none;
+        margin-left: 0;
+    }
+
+    header nav ul li a{
+        display: block;
+        padding: 25px;
+        border-bottom: 1px solid #eeeded;
+        color: #50355a;
+    }
+
+    header nav ul li a:hover{
+        background-color: #f6f4f4;
+        text-decoration: none;
+    }
+
+    .jumbotron{
+        height: 600px;
+    }
+
+
+    .patterns ul.patternList li{
+        width: 47%;
+        margin: 0 5% 5% 0;
+    }
+
+    .patterns ul.patternList li:nth-child(3n){
+        margin: 0 5% 5% 0;
+    }
+
+    .patterns ul.patternList li:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width:550px){
+    .container{
+        padding: 0 25px 0px 25px;
+    }
+
+    .jumbotron .tagLine{
+        margin-top:-15%;
+    }
+
+    .jumbotron .tagLine h3{
+        margin: 0;
+        left: 0;
+    }
+    .jumbotron .tagLine h2{
+        font-size: 60px;
+    }
+
+    .patterns ul.patternList li{
+        width: 100%;
+    }
+}
