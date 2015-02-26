@@ -1,0 +1,189 @@
+@import url(http://fonts.googleapis.com/css?family=Coustard);
+
+/*General*/
+
+html{
+  width:100%;
+}
+
+body{
+  max-width:800px;
+  margin-right:auto;
+  margin-left:auto;
+  background-image:url('../img/bg.png');
+}
+
+a {
+  color: #2e8e14;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #2e8e14;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Coustard', serif;
+  font-weight: bold;
+}
+
+
+/*header*/
+header{
+  max-width: 800px;
+  padding:15px 0px 13px 0px;
+}
+
+#title, #logo, #tag{
+  display: inline;
+}
+
+#tag{
+  padding-left: 8px;
+  font-size: 7pt;
+  font-style: italic;
+}
+
+.green{
+  color:#2e8e14;
+}
+
+.link{
+  cursor:pointer;
+}
+
+
+/* nav */
+
+nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+nav li {
+  display: inline;
+}
+
+nav ul{
+  margin:0;
+  padding: 0;
+}
+
+
+/* large splash */
+.jumbotron {
+  background-image:url('../img/pat.png');
+  height: 480px;
+  padding:0;
+  width:100%;
+  margin:0;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #000;
+}
+
+.jumbotron .container{
+  float:left;
+  position: relative;
+  top:34%;
+  left:5%;
+}
+
+.jumbotron .container a{
+  color:#000;
+  font-weight: bold;
+  text-shadow: 0px 1px 3px #fff;
+}
+
+.jumbotron .container a:hover{
+  color: #2e8e14;
+  text-decoration: none;
+}
+
+
+
+
+/*bottom*/
+
+.more {
+  font-size: 10pt;
+}
+
+.more .container{
+  padding: 15px;
+}
+
+.more .container .col-md-3{
+  padding-left: 30px;
+}
+
+    .more h3 {
+      font-family: 'Shift', sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+.smedia{
+  margin-right:5px;
+  height:25px;
+  width:25px;
+  opacity:.8;
+}
+
+
+
+.content{
+  background-color: #fff;
+  border:1px solid #dbdbdb;
+  max-width: 800px;
+  margin:5px 0 10px 0;
+}
+.content .container{
+  padding:45px;
+  font-family: 'Shift', sans-serif;
+  font-size: 11pt;
+  font-weight: 100;
+}
+
+.content .container h1{
+  font-size: 18pt;
+}
+
+
+
+/*Repsonsive*/
+
+@media screen and (max-width: 800px) {
+ .jumbotron {
+    height: 450px;
+  }
+
+  .findme{
+    padding-left: 75px;
+  }
+
+  .more .container .col-md-3{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+}
+
+
+@media screen and (max-width: 550px) {
+  .jumbotron {
+    height: 380px;
+  }
+
+  #tag{
+    display:none;
+  }
+
+}
