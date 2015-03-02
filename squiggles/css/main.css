@@ -161,14 +161,6 @@ nav ul{
 /*Repsonsive*/
 
 @media screen and (max-width: 800px) {
- .jumbotron {
-    height: 450px;
-  }
-
-  .findme{
-    padding-left: 75px;
-  }
-
   .more .container .col-md-3{
     padding-left: 15px;
     padding-top: 15px;
@@ -178,10 +170,6 @@ nav ul{
 
 
 @media screen and (max-width: 550px) {
-  .jumbotron {
-    height: 380px;
-  }
-
   #tag{
     display:none;
   }
