@@ -78,7 +78,7 @@ nav ul{
 /* large splash */
 .jumbotron {
   background-image:url('../img/pat.png');
-  height: 480px;
+  height: 500px;
   padding:0;
   width:100%;
   margin:0;
@@ -113,6 +113,7 @@ nav ul{
 /*bottom*/
 
 .more {
+  margin-top: 8px;
   font-size: 10pt;
 }
 
@@ -143,7 +144,6 @@ nav ul{
   background-color: #fff;
   border:1px solid #dbdbdb;
   max-width: 800px;
-  margin:0px 0 10px 0;
 }
 .content .container{
   padding:45px;
