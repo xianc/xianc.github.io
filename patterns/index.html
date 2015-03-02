@@ -16,6 +16,46 @@
 			$('header nav').toggleClass('active');
 			
 		});
+
+		$(".jumper").on("click", function( e ) {
+    
+		    e.preventDefault();
+
+		    $("body, html").animate({ 
+		        scrollTop: $( $(this).attr('href') ).offset().top 
+		    }, 600);
+		    
+		});
+
+		size_li = $(".patternList li").size();
+	    x=6;
+
+	    $('.patternList li:lt('+x+')').show();
+
+	    $('.morePatterns_btn').click(function () {
+	        x= (x+3 <= size_li) ? x+3 : size_li;
+	        $('.patternList li:lt('+x+')').fadeIn( "slow" );
+
+	        $('.lessPatterns_btn').show();
+	        if(x>=size_li){
+	        	$('.morePatterns_btn').hide();
+	        }
+	    });
+
+	    $('.lessPatterns_btn').click(function () {
+	    	leftOver=x%3;
+	    	if(leftOver==0)
+	    		leftOver=3;
+	    	
+	        x=(leftOver==0) ? 3 : x-leftOver;
+	        $('.patternList li').not(':lt('+x+')').fadeOut( "slow" );
+	        
+	        $('.morePatterns_btn').show();
+	        if(x<=3){
+	        	$('.lessPatterns_btn').hide();
+	        }
+	    });
+
 	});
 	</script>
 </head>
@@ -24,14 +64,14 @@
 	<header>
 		<div class="container">
 			<div class="titleText">
-				<a href="#" alt="" title="Patterns"/>Patterns</a>
+				<a href="index.html" alt="" title="Patterns"/>Patterns</a>
 			</div>
 			<a href="#" class="hamburger"></a>
 			<nav>
 				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Patterns</a></li>
+					<li><a class="jumper" href="#pattern">Patterns</a></li>
+					<li><a class="jumper" href="#content1">Content One</a></li>
+					<li><a class="jumper" href="#content2">Content Two</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -44,8 +84,8 @@
 		</div>
 	</div>
 
-	<section class="patterns">
-		<div class="container">
+	<section class="patterns" id="pattern">
+		<div class="container" id="patternz">
 			<ul class="patternList">
 				<li>
 					<a href="#"><img src="img/p1.jpg" alt="" title="" class="patternThumb"/></a>
@@ -113,14 +153,30 @@
 						</h2>
 					</div>
 				</li>
+
+				<li>
+					<a href="#"><img src="img/p4.jpg" alt="" title="" class="patternThumb"/></a>
+					<div class="patternInfo">
+						<h1>
+							<a href="#">Lorem ipsum dolor sit amet, deleniti</a>
+						</h1>
+						<h2>
+							Te legimus detracto vel, est in hinc posse consetetur.
+						</h2>
+					</div>
+				</li>
+
 			</ul>
+
 			<div class="morePatterns">
-				<a href="#" class="morePatterns_btn">- More -</a>
+				<div class="lessPatterns_btn"><a>- Less -</a></div>
+				<div class="morePatterns_btn"><a>- More -</a></div>
 			</div>
 		</div>
 	</section>
 
-	<div class="content2">
+
+	<div class="content2" id="content2">
 		<div class="container">
 			<h1>Aliquam lucilius recteque ea vis</h1>
 			<h2>
@@ -137,6 +193,7 @@
 			&copy; 2015 Cakdel. All Rights Resrved.
 		</div>
 	</footer>
+
 	
 </body>
 </html>
