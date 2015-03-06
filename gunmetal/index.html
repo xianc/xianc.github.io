@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Patterns - Portfolio</title>
+	<title>Untitled</title>
 	<meta charset="utf-8">
 	<meta name="author" content="cakdel.com">
-	<meta name="description" content="Portfolio"/>
+	<meta name="description" content="Untitled"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -27,36 +27,18 @@
 		    
 		});
 
-		size_li = $(".patternList li").size();
-	    x=6;
+		$('.slider .slide:eq(0)').addClass('active').fadeIn(200);
 
-	    $('.patternList li:lt('+x+')').show();
+		$('.slider-nav li a').click(function() {    
+		    var index = $(this).parent().index('li');
+		    console.log(index);
+		    $('.slider .slide.active').removeClass('active').fadeOut(200, function() { 
+		            $('.slider .slide:eq(' + index + ')').addClass('active').fadeIn(200);
+		        });
 
-	    $('.morePatterns_btn').click(function () {
-	        x= (x+3 <= size_li) ? x+3 : size_li;
-	        $('.patternList li:lt('+x+')').fadeIn( "slow" );
+		    return false;
+		});
 
-	        $('.lessPatterns_btn').show();
-	        if(x>=size_li){
-	        	$('.morePatterns_btn').hide();
-	        }
-	    });
-
-	    $('.lessPatterns_btn').click(function () {
-	    	leftOver=x%3;
-	    	if(leftOver==0)
-	    		leftOver=3;
-	    	
-	        x=(leftOver==0) ? 3 : x-leftOver;
-	        $('.patternList li').not(':lt('+x+')').fadeOut( "slow" );
-	        
-	        $('.morePatterns_btn').show();
-	        if(x<=3){
-	        	$('.lessPatterns_btn').hide();
-	        }
-	    });
-
-	});
 	</script>
 </head>
 <body>
@@ -64,24 +46,41 @@
 	<header>
 		<div class="container">
 			<div class="titleText">
-				<a href="index.html" alt="" title="Patterns"/>Patterns</a>
+				<a href="index.html" alt="" title="Untitled"/>Untitled</a>
 			</div>
-			<a href="#" class="hamburger"></a>
+			<a href="" class="hamburger">Menu</a>
 			<nav>
 				<ul>
-					<li><a class="jumper" href="#pattern">Patterns</a></li>
-					<li><a class="jumper" href="#content2">Content Two</a></li>
+					<li><a class="jumper" href="#intro">One</a></li>
+					<li><a class="jumper" href="#list">Two</a></li>
+					<li><a class="jumper" href="#content1">Three</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
+	
 
-	<div class="jumbotron">
-		<div class="tagLine">
-			<h2>Repeating with Ease</h2>
-			<h3>a pattern for every occasion</h3>
-		</div>
+<div class="container">
+	<div class="slider">
+	    <div class="slide">1</div>
+	    <div class="slide">2</div>
+	    <div class="slide">3</div>
+	    <div class="slide">4</div>
+
+	    <ul class="slider-nav">
+	    <li><a href="#" >1</a></li>
+	    <li><a href="#" >2</a></li>
+	    <li><a href="#" >3</a></li>
+	    <li><a href="#" >4</a></li>
+		</ul>
 	</div>
+	<div class="clear"></div>
+</div>
+
+
+
+
+<!--
 
 	<section class="patterns" id="pattern">
 		<div class="container" id="patternz">
@@ -193,6 +192,6 @@
 		</div>
 	</footer>
 
-	
+	-->
 </body>
 </html>

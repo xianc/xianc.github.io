@@ -30,6 +30,50 @@ h1 {
 }
 
 
+input, textarea{
+  margin: 5px 0px;
+  padding:5px;
+  border:1px solid #b4cf5a;
+  background: #fefefe;
+}
+textarea{
+  min-width:300px;
+  min-height:100px;
+}
+
+button{
+  margin: 10px 0px;
+  background: #b4cf5a;
+  border-radius: 5px;
+  padding:12px 12px 8px 12px;
+  border:0;
+}
+
+button:hover{
+  background: #a4c633;
+}
+
+button,.tbl_title{
+  background: #b4cf5a;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  font-size: 9pt;
+  letter-spacing: 1px;
+}
+
+
+table{
+  margin:10px 0px;
+  width: 100%;
+}
+td{
+  font-size: 10pt;
+  padding: 12px 10px;
+  border:1px solid #b4cf5a;
+}
+
+
 /*header*/
 header{
   max-width: 800px;
@@ -146,7 +190,7 @@ nav ul{
   max-width: 800px;
 }
 .content .container{
-  padding:45px;
+  padding:20px 45px;
   font-family: 'Shift', sans-serif;
   font-size: 11pt;
   font-weight: 100;
