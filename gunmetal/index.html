@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Untitled</title>
+	<title>Gumetal</title>
 	<meta charset="utf-8">
 	<meta name="author" content="cakdel.com">
-	<meta name="description" content="Untitled"/>
+	<meta name="description" content="Gumetal"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -17,27 +17,17 @@
 			
 		});
 
-		$(".jumper").on("click", function( e ) {
-    
-		    e.preventDefault();
-
-		    $("body, html").animate({ 
-		        scrollTop: $( $(this).attr('href') ).offset().top 
-		    }, 600);
-		    
-		});
 
 		$('.slider .slide:eq(0)').addClass('active').fadeIn(200);
-
 		$('.slider-nav li a').click(function() {    
 		    var index = $(this).parent().index('li');
 		    console.log(index);
 		    $('.slider .slide.active').removeClass('active').fadeOut(200, function() { 
 		            $('.slider .slide:eq(' + index + ')').addClass('active').fadeIn(200);
 		        });
-
 		    return false;
 		});
+	});
 
 	</script>
 </head>
@@ -46,14 +36,15 @@
 	<header>
 		<div class="container">
 			<div class="titleText">
-				<a href="index.html" alt="" title="Untitled"/>Untitled</a>
+				<a href="index.html" alt="" title="Gumetal"/>Gumetal</a>
 			</div>
-			<a href="" class="hamburger">Menu</a>
+			<a href="#" class="hamburger">Menu</a>
 			<nav>
 				<ul>
-					<li><a class="jumper" href="#intro">One</a></li>
-					<li><a class="jumper" href="#list">Two</a></li>
-					<li><a class="jumper" href="#content1">Three</a></li>
+					<li><a class="jumper" href="#one">One</a></li>
+					<li><a class="jumper" href="#two">Two</a></li>
+					<li><a class="jumper" href="#three">Three</a></li>
+					<li><a class="jumper" href="#four">Four</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -62,136 +53,25 @@
 
 <div class="container">
 	<div class="slider">
-	    <div class="slide">1</div>
-	    <div class="slide">2</div>
-	    <div class="slide">3</div>
-	    <div class="slide">4</div>
+		<div class="frames">
+		    <div class="slide" id="first">1</div>
+		    <div class="slide">2</div>
+		    <div class="slide">3</div>
+		    <div class="slide">4</div>
+		</div>
 
-	    <ul class="slider-nav">
-	    <li><a href="#" >1</a></li>
-	    <li><a href="#" >2</a></li>
-	    <li><a href="#" >3</a></li>
-	    <li><a href="#" >4</a></li>
-		</ul>
+		<div class="snav">
+		    <ul class="slider-nav">
+		    <li><a href="#" >1</a></li>
+		    <li><a href="#" >2</a></li>
+		    <li><a href="#" >3</a></li>
+		    <li><a href="#" >4</a></li>
+			</ul>
+		</div>
 	</div>
 	<div class="clear"></div>
 </div>
 
 
-
-
-<!--
-
-	<section class="patterns" id="pattern">
-		<div class="container" id="patternz">
-			<ul class="patternList">
-				<li>
-					<a href="#"><img src="img/p1.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Lorem ipsum dolor sit amet, deleniti</a>
-						</h1>
-						<h2>
-							Te legimus detracto vel, est in hinc posse consetetur.
-						</h2>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="img/p2.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Ne tritani legendos sit</a>
-						</h1>
-						<h2> 
-							Equidem tibique copiosae per ea, cum ut soleat labore bonorum. Vivendo consulatu vel ei, et accusata recusabo interpretaris est. 
-						</h2>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="img/p3.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Platonem persecuti forensibus eu est</a>
-						</h1>
-						<h2>
-							Enim disputando qui no.
-						</h2>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="img/p1.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Lorem ipsum dolor sit amet, deleniti</a>
-						</h1>
-						<h2>
-							Te legimus detracto vel, est in hinc posse consetetur.
-						</h2>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="img/p2.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Ne tritani legendos sit</a>
-						</h1>
-						<h2> 
-							Equidem tibique copiosae per ea, cum ut soleat labore bonorum. Vivendo consulatu vel ei, et accusata recusabo interpretaris est. 
-						</h2>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="img/p3.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Platonem persecuti forensibus eu est</a>
-						</h1>
-						<h2>
-							Enim disputando qui no.
-						</h2>
-					</div>
-				</li>
-
-				<li>
-					<a href="#"><img src="img/p4.jpg" alt="" title="" class="patternThumb"/></a>
-					<div class="patternInfo">
-						<h1>
-							<a href="#">Lorem ipsum dolor sit amet, deleniti</a>
-						</h1>
-						<h2>
-							Te legimus detracto vel, est in hinc posse consetetur.
-						</h2>
-					</div>
-				</li>
-
-			</ul>
-
-			<div class="morePatterns">
-				<div class="lessPatterns_btn"><a>- Less -</a></div>
-				<div class="morePatterns_btn"><a>- More -</a></div>
-			</div>
-		</div>
-	</section>
-
-
-	<div class="content2" id="content2">
-		<div class="container">
-			<h1>Aliquam lucilius recteque ea vis</h1>
-			<h2>
-			Lorem ipsum dolor sit amet, duo ex movet electram, eam ex ullum qualisque. Quo ut eros urbanitas adversarium. Omnesque molestie quaestio has ei, nec facilisi assueverit te. Id labores blandit principes pri, his et inani putant causae. No mei apeirian persecuti.
-			</h2>
-		</div>
-		<div class="c2btn">
-			<a href="#" class="btn">Click Me</a>
-		</div>
-	</div>
-
-	<footer>
-		<div class="container">
-			&copy; 2015 Cakdel. All Rights Resrved.
-		</div>
-	</footer>
-
-	-->
 </body>
 </html>
