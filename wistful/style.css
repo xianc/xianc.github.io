@@ -13,7 +13,7 @@ body{
 
 header{
 	background: url('img/header.png');
-	width:874px;
+	width:100%;
 	height:196px;
 	position: relative;
 }
@@ -40,7 +40,7 @@ nav a{
 
 .content{
 	background-color: #eae6e7;
-	width:874px;
+	width:100%;
 	min-height:196px;
 	font-family: "Century Gothic";
 	font-size: 14px;
@@ -54,7 +54,7 @@ nav a{
 }
 
 .wrap{
-	padding:30px;
+	padding:30px 30px 50px 30px;
 
 }
 
@@ -105,4 +105,21 @@ footer{
 footer a{
 	color:#f8e6e4;
 	text-decoration: none;
+}
+
+
+@media screen and (max-width: 875px) {
+.wrapper{
+	margin:0 auto;
+	width:100%;
+}
+
+header{
+	background: url('img/header_sm.png') no-repeat;
+	background-size: cover;
+	width:100%;
+	height:140px;
+	position: relative;
+}
+
 }
