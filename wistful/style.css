@@ -27,7 +27,30 @@ nav{
 	color: #3b2209;
 }
 
+
+nav ul{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    float:right;
+}
+
+nav ul li{
+	margin: 0;
+    padding:0;
+    float: right;
+}
+
 nav a{
+	color:#f8e6e4;
+	text-decoration: none;
+}
+
+nav a:hover{
+	cursor: pointer;
+}
+
+nav .link, nav #menu{
 	border-left: 20px solid #d14841;
 	color:#f8e6e4;
 	padding: 3px 10px;
@@ -37,6 +60,17 @@ nav a{
 	font-weight: bold;
 	margin-left: 8px;
 }
+
+nav .link:hover,nav #menu:hover{
+	border-left: 20px solid #eb6b56;
+	cursor: pointer;
+	
+}
+
+nav #menu{
+	display:none;
+}
+
 
 .content{
 	background-color: #eae6e7;
@@ -117,9 +151,46 @@ footer a{
 header{
 	background: url('img/header_sm.png') no-repeat;
 	background-size: cover;
-	width:100%;
 	height:140px;
 	position: relative;
 }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+	header{
+		background: url('img/header_sm.png') top left repeat-y;
+		background-size: auto 100%;
+		background-size: cover;
+		position: relative;
+	}
+
+
+
+	nav ul{
+        display: block;
+    }
+
+	nav ul li{
+        display: block;
+        float: none;
+        padding:20px;
+    }
+
+    nav #menu{
+    	display:block;
+    }
+
+    nav .link{
+    	border-left: 20px solid #eae6e7;
+		display:none;
+    }
+
+    nav .link:hover, nav #menu:hover{
+    	border-left: 20px solid #eb6b56;
+		cursor: pointer;
+    }
 
 }

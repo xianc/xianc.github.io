@@ -1,17 +1,23 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 		<title>Wistful</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 	</head>
 	<body>
 
 		<div class="wrapper">
 		<header>
 			<nav>
-				<a href="#">link one</a>
-				<a href="#">link two</a>
-				<a href="#">link three</a>
+				<a id="menu">Menu</a>
+				<ul>
+					<li class="link"><a href="#">link one</a></li>
+					<li class="link"><a href="#">link two</a></li>
+					<li class="link"><a href="#">link three</a></li>
+			</ul>
 			</nav>
 		</header>
 
@@ -45,10 +51,9 @@
 				</p>
 
 				<br/>
-				<h4>More something</h4>
-				<p>
-					Case eros an eos, magna partiendo no quo, at nulla nominati hendrerit eos. Choro hendrerit sit at, usu nostro facilisis scripserit ut. Pri ea esse tation antiopam, semper quaestio conclusionemque ius cu. Ad quis duis mei, eum viderer postulant complectitur ei. Vim debet mundi cu, eripuit accusam ei quo.
-				</p>
+				<h4>Credits</h4>
+				Layout by Xian Chen at <a href="http://cakdel.com" target="_blank">Cakdel.com</a><br>
+				Brush by <a href="http://brushlovers.com/" target="_blank">BrushLoves</a>
 
 			</div>
 		</div>
@@ -57,6 +62,13 @@
 			layout design by <a href="http://cakdel.com" alt="Xian Chen - Cakdel Designs" target="_blank">cakdel.com</a>
 		</footer>
 	</div>
+
+	<script>
+	   $('#menu').click(function(){
+			$('.link').toggle();
+		});
+	
+	</script>
 
 	</body>
 </html>
