@@ -1,0 +1,128 @@
+html,body{
+	margin:0;
+	background-color: #dfdcdd;
+	background: url('img/bg.png');
+	height:100%;
+	width: 100%;
+}
+
+header{
+	background-color: #232222;
+	height:100%;
+	width:260px;
+	color: #dfdcdd;
+	font-family: "Arial";
+	position: relative;
+}
+
+.profile{
+	padding:20px;
+	text-align: center;
+	color: #29a781;
+}
+
+.profile h1, .profile h2{
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+.profile h1{
+	font-size: 16px;
+	margin:0;
+}
+.profile h2{
+	font-size: 12px;
+	margin:2px;
+}
+
+canvas#pic{
+	width: 200px;
+	height: 150px;
+	margin-bottom: 10pt;
+	border:1px solid #000000;
+	background-color: #e1e0e0;
+}
+
+nav{
+	margin:40px 0;
+	width: 100%;
+}
+nav ul{
+	list-style: none;
+	padding: 0;
+}
+nav li a{
+	display: block;
+	padding: 10px 20px;
+	color: #dfdcdd;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-bottom:1px solid #232222;
+	cursor: pointer;
+}
+nav li a:hover{
+	background-color: #333232;
+	border-bottom:1px solid #29a781;
+}
+
+.social{
+	bottom:0px;
+	position: absolute;
+	padding:5px 15px;
+}
+
+
+.social #twitter {
+    background: url('img/social.png') 0px 0px;
+}
+
+
+.social #facebook {
+    background: url('img/social.png') -41px 0px;
+}
+
+.social #youtube {
+    background: url('img/social.png') -83px -0px;
+}
+
+.social #tumblr {
+    background: url('img/social.png') -125px -0px;
+}
+
+.social #behance {
+    background: url('img/social.png') -167px -0px;
+}
+
+.social #instagram {
+    background: url('img/social.png') -210px -0px;
+}
+
+.social #blogger {
+    background: url('img/social.png') -251px 0px;
+}
+
+.social #linkedin {
+    background: url('img/social.png') -294px 0px;
+}
+
+.social #twitter, .social #facebook, .social #youtube, .social #tumblr, .social #behance, .social #instagram, .social #blogger, .social #linkedin{
+	display: inline-block;
+    width: 42px;
+    height: 42px;
+	opacity: .2;
+	filter:alpha(opacity=20);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.social #twitter:hover, .social #facebook:hover, .social #youtube:hover, .social #tumblr:hover, .social #behance:hover, .social #instagram:hover, .social #blogger:hover, .social #linkedin:hover{
+	opacity: .6;
+	filter:alpha(opacity=60);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
