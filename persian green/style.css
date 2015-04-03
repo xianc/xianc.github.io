@@ -304,3 +304,8 @@ textarea{
 	}
 }
 
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+	section > .intro #title_banner{
+		width:250px;
+	}
+}
