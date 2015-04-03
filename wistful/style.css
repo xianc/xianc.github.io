@@ -192,3 +192,12 @@ header{
     }
 
 }
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+	header{
+		background: url('img/header_xsm.png') top left repeat-y;
+		background-size: auto 100%;
+		background-size: cover;
+		position: relative;
+	}
+}
