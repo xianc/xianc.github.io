@@ -161,13 +161,11 @@ header{
 
 @media screen and (max-width: 500px) {
 	header{
-		background: url('img/header_sm.png') top left repeat-y;
+		background: url('img/header_xsm.png') top left repeat-y;
 		background-size: auto 100%;
 		background-size: cover;
 		position: relative;
 	}
-
-
 
 	nav ul{
         display: block;
