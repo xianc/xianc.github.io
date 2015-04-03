@@ -178,9 +178,11 @@ section > .intro{
 section > .intro #title_banner{
 	width:300px;
 	margin:0 auto;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	 position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
 	font-size: 30px;
 	padding:50px;
 	border: 1px solid #29a781;
