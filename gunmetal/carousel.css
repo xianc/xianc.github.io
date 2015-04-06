@@ -1,0 +1,67 @@
+/*Slider*/
+.slider { 
+    height:350px; 
+    position:relative;
+    background: #e9e9e9; 
+    width:100%; 
+}
+
+.slide { 
+    display:none; 
+    background:grey; 
+    position:absolute; 
+    width: 100%;
+    height: 100%;
+}
+
+.first, .second, .third, .fourth{
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+    .first{
+         background: url('http://thegreatsouthernbrainfart.com/wp-content/uploads/metal-wallpapers-15.jpg') no-repeat bottom center;
+    }
+
+    .second{
+        background: url('http://www.proshaper.com/wp-content/uploads/2013/06/metal_background_by_homers85-d53bo7t.jpg') no-repeat bottom center;
+    }
+
+    .third{
+        background: url('http://mayang.com/textures/Metal/images/Patterned%20Metal/manhole_texture_4250873.JPG') no-repeat bottom center;
+    }
+
+    .fourth{
+        background: url('http://www.pageresource.com/wallpapers/wallpaper/black-metal-texture-resolution_1421878.jpg') no-repeat bottom center;
+    }
+
+section nav{
+    bottom:10px;
+    position:absolute;
+    text-align: center;
+    width:100%;
+}
+#dots {
+    margin:0;
+    padding: 0;
+}
+
+section nav li { 
+    display: inline-block;
+    margin:0 7px; 
+    padding: 7px;
+    border:2px solid #000;
+    background-color: #ec9600;
+    border-radius: 10px;
+    list-style: none;
+    cursor:pointer;
+}
+
+section nav li:hover { 
+    border:2px solid #ec9600;
+}
+
+.active-dot{
+    border:2px solid #ec9600;
+}
