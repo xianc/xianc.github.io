@@ -90,6 +90,10 @@ nav #menu{
 	font-family: "Century Gothic";
 	color:#eb6b56;
 	font-style:italic;
+	text-decoration: none;
+}
+.content a:hover, footer a:hover{
+	text-decoration: underline;
 }
 
 .wrap{

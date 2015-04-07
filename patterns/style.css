@@ -13,6 +13,8 @@ body{
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
 }
 
 ul, li{
@@ -125,11 +127,8 @@ header .hamburger{
 
 
 /* Patterns */
-.patterns, .content2, .content1{
+.patterns, .content2 {
     padding: 100px 0px 100px 0px;
-}
-.patterns, .content1{
-    background-color: #f4f3f3;
 }
 
 .patterns .patternList{
@@ -149,27 +148,21 @@ header .hamburger{
 
 .patterns .patternList .patternThumb{
     width: 100%;
-    height: auto;
     vertical-align: top;
 
     -webkit-filter: grayscale(100%);
     filter: gray; filter: grayscale(100%);
     filter: url(desaturate.svg#greyscale)
 
-    -o-transition:.5s ease-in;
-    -ms-transition:.5s ease-in;
-    -moz-transition:.5s ease-in;
-    -webkit-transition:.5s ease-in;
+    -o-transition:.5s ease-in-out;
+    -ms-transition:.5s ease-in-out;
+    -moz-transition:.5s ease-in-out;
+    -webkit-transition:.5s ease-in-out;
 }
 
 .patterns .patternList .patternThumb:hover{
     filter:none;
     -webkit-filter: grayscale(0%);
-
-    -o-transition:.5s ease-in;
-    -ms-transition:.5s ease-in;
-    -moz-transition:.5s ease-in;
-    -webkit-transition:.5s ease-in;
 }
 
 .patterns .patternList li:nth-child(3n){
@@ -177,7 +170,6 @@ header .hamburger{
 }
 
 .patterns .patternInfo{
-    width: 100;
     padding: 10px;
 }
 
@@ -210,35 +202,17 @@ header .hamburger{
     color: #000;
 }
 
-.complete{
-    display:none;
-}
-
-
-.more{
-    background:lightblue;
-    color:navy;
-    font-size:13px;
-    padding:3px;
-    cursor:pointer;
-}
-
 .patterns .morePatterns{
     display: block;
-    width: 100%;
     text-align: center;
     margin: 60px 0px 10px 0px;
 }
 
 .morePatterns_btn, .lessPatterns_btn{
     padding: 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
     color: #292828;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -246,11 +220,13 @@ header .hamburger{
     display: none;
 }
 
+.morePatterns_btn a, .lessPatterns_btn a{
+    -o-transition:.5s ease-in-out;
+    -ms-transition:.5s ease-in-out;
+    -moz-transition:.5s ease-in-out;
+    -webkit-transition:.5s ease-in-out;
+}
 .morePatterns_btn a:hover, .lessPatterns_btn a:hover{
-    -o-transition:.5s ease-in;
-    -ms-transition:.5s ease-in;
-    -moz-transition:.5s ease-in;
-    -webkit-transition:.5s ease-in;
     color: #CCC;
 }
 
@@ -261,7 +237,6 @@ header .hamburger{
 .content2{
     background-color: #0f1312;
     text-align: center;
-
     position: relative;
     background: url('img/body.png') no-repeat bottom center;
     background-size: cover;
@@ -289,15 +264,10 @@ header .hamburger{
 }
 
 /* Content2 Button */
-.content2 .c2btn{
-    margin:65px 0px 30px 0px;
-    text-align: center;
-}
-.content2 .c2btn .btn{
+.btn{
     background-color: #7c7b7b;
     padding: 10px;
 
-    font-family: 'Lato', sans-serif;
     color: #eeeded;
     font-size: 16px;
     text-decoration: none;
@@ -317,7 +287,7 @@ header .hamburger{
 
 }
 
-.content2 .c2btn .btn:hover{
+.btn:hover{
     color: #292828;
     border: 2px solid #292828;    
 }
@@ -332,7 +302,6 @@ footer{
 footer .container{
     padding-top: 18px;
     text-align: center;
-    font-family: 'Lato', sans-serif;
     font-size: 14px;
     color: #eeeded;
     letter-spacing: 2px;
