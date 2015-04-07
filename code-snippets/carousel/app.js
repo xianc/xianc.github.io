@@ -38,5 +38,14 @@ $(document).ready(function(){
 		currentDot.removeClass('active-dot');
 		prevDot.addClass('active-dot');
 	});
+	
+
+	$('ul li').click(function(){
+		var index=$(this).index();
+		$('.active-dot').removeClass('active-dot');
+		$('.active-slide').removeClass('active-slide');
+		$(this).addClass('active-dot');
+		$('.slide:eq('+index+')').addClass('active-slide');
+	})
 
 });
