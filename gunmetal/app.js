@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+	$('.content2').animate({'opacity':'1'},800);
+
 	$('.hamburger').on('click', function(){
 		$('header nav').toggleClass('active');
 		
@@ -34,7 +37,21 @@ $(document).ready(function(){
 
 	    return false;
 	});
-
-
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        $('.hidden').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + 100;
+            
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},800);
+            }
+            
+        }); 
+    
+    });
 
 });

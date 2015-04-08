@@ -1,6 +1,6 @@
 /*Slider*/
 .slider { 
-    height:350px; 
+    height:450px; 
     position:relative;
     background: #e9e9e9; 
     width:100%; 
@@ -29,15 +29,11 @@
     }
 
     .third{
-        background: url('http://mayang.com/textures/Metal/images/Patterned%20Metal/manhole_texture_4250873.JPG') no-repeat bottom center;
-    }
-
-    .fourth{
         background: url('http://www.pageresource.com/wallpapers/wallpaper/black-metal-texture-resolution_1421878.jpg') no-repeat bottom center;
     }
 
 section nav{
-    bottom:10px;
+    bottom:25px;
     position:absolute;
     text-align: center;
     width:100%;
