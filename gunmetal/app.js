@@ -7,6 +7,19 @@ $(document).ready(function(){
 		
 	});
 
+
+	function goToByScroll(id){
+	    id = id.replace("Link", "");
+	    $('html,body').animate({
+	        scrollTop: $("#"+id).offset().top},
+	        'slow');
+	}
+
+	$("nav > ul > li > a").click(function(e) { 
+    	e.preventDefault(); 
+    	goToByScroll($(this).attr("id"));           
+	});
+
 	$('.slider .slide:eq(0)').fadeIn(200);
 	$('#dots li:eq(0)').addClass('active-dot').fadeIn(200);
 

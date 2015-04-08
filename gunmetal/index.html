@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Gumetal</title>
+	<title>Gunmetal</title>
 	<meta charset="utf-8">
 	<meta name="author" content="cakdel.com">
-	<meta name="description" content="Gumetal"/>
+	<meta name="description" content="Gunmetal"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="carousel.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="app.js"></script>
-
 
 </head>
 <body>
@@ -19,21 +16,21 @@
 	<div class="container">
 		<header>
 			<div class="titleText">
-				<a href="index.html" alt="" title="Gumetal"/>Gumetal</a>
+				<a href="index.html" alt="" title="Gumetal"/>Gunmetal</a>
 			</div>
 			<a href="#" class="hamburger">Menu</a>
 			<nav>
 				<ul>
-					<li><a class="jumper" href="#one">One</a></li>
-					<li><a class="jumper" href="#two">Two</a></li>
-					<li><a class="jumper" href="#three">Three</a></li>
-					<li><a class="jumper" href="#four">Four</a></li>
+					<li><a id="oneLink" href="#">One</a></li>
+					<li><a id="twoLink" href="#">Two</a></li>
+					<li><a id="threeLink" href="#">Three</a></li>
+					<li><a id="fourLink" href="#">Four</a></li>
 				</ul>
 			</nav>
 		
 		</header>
 	
-		<section class="carousel">
+		<section class="carousel" id="one">
 			<div class="slider">
 			    <div class="slide first active-slide"></div>
 			    <div class="slide second"></div>
@@ -52,7 +49,7 @@
 		</section>
 	</div>
 	<div class="container">
-		<div class="content2 hidden">
+		<div class="content2 hidden" id="two">
 			<div class="col1">
 				<p> 
 					<h1>Ut numquam deseruisse</h1>
@@ -78,7 +75,7 @@
 			</div>
 			<br class="clear" />
 		</div>
-		<div class="content3">
+		<div class="content3" id="three">
 			<ul class="item">
 				
 				<li class="hidden"><a href="#"><img src="img/list.png"></a></li>
@@ -89,18 +86,43 @@
 			</ul>
 			<br class="clear" />
 		</div>
-		<div class="content4">
+		<div class="content4" id="four">
 			<p class="hidden">
 				Id his essent erroribus moderatius, an vix doming everti deterruisset. Saperet tractatos sea cu, ad sapientem gubergren eum, esse assum usu et. Choro oporteat ad vix, et quo animal dolorem, ad possit numquam vel. Tale porro detraxit eum ei, at vim soluta numquam commune, te ridens maiorum deseruisse vim. Natum detracto consetetur ut mea, ius in voluptua sapientem omittantur, libris accusam officiis te vis.
 			</p>
 		</div>
 
 		<footer>
-			Layout Design by <a href="http://www.cakdel.com/">Cakdel.com</a>
+			<div class="wrap hidden">
+				<div class="summary">
+					<h1>About</h1>
+					Gunmetal is inspired by the orange tones of rust and the greys of metal. It is a one page reponsive web layout-- it resizes to fit small devices at 800 pixels. The slider and thumbanil images and found on Google. <br/><br/>
+					For more information about the design process, please view <a href="the-design-process.html">this page</a>. 
+				</div>
+				<div class="pages">
+					<h1>Pages</h1>
+					<li><a id="oneLink" href="#">Link Text One</a></li>
+					<li><a id="twoLink" href="#">Link Text Two</a></li>
+					<li><a id="threeLink" href="#">Link Text Three</a></li>
+					<li><a id="fourLink" href="#">Link Text Four</a></li>
+					<br/>
+					<li><a href="#" target="black">External Link</a></li>
+				</div>
+				<div class="contact">
+					<h1>Contact Us</h1>
+					<input type="text" name="name" placeholder="Name"><br>
+					<input type="text" name="email" placeholder="E-mail"><br>
+					<textarea></textarea>
+					<button class="submit">Submit</button>
+				</div>
+			</div>
+			<hr>
+			<div class="creds">Layout Design by <a href="http://www.cakdel.com/">Cakdel.com</a></div>
 		</footer>
 	</div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
