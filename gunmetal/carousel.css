@@ -61,3 +61,10 @@ section nav li:hover {
 .active-dot{
     border:2px solid #ec9600;
 }
+
+@media (max-width:500px){
+    .slider { 
+        height:350px; 
+    }
+
+    }
