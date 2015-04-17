@@ -37,7 +37,7 @@ input, textarea{
   background: #fefefe;
 }
 textarea{
-  min-width:300px;
+  width:50%;
   min-height:100px;
 }
 
@@ -208,7 +208,7 @@ nav ul{
   .more .container .col-md-3{
     padding-left: 15px;
     padding-top: 15px;
-}
+  }
 
 }
 
@@ -216,6 +216,11 @@ nav ul{
 @media screen and (max-width: 550px) {
   #tag{
     display:none;
+  }
+
+  textarea{
+    width:100%;
+    min-height:100px;
   }
 
 }
