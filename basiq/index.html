@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Basiq</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+		<link href="style.css" rel="stylesheet" type="text/css" />
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+	    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="style.css" rel="stylesheet">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	    <script src="js/masonry.pkgd.min.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<h1 id="title">Basiq.</h1>
+
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Recipe Box</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="intro-slider">
+		    <div class="slider">
+
+		    	<div class="slide active-slide">
+			        <div class="container">
+			            <div class="slide-img col-xs-8">
+			             
+			            </div>
+			            <div class="slide-copy col-xs-4">
+			            	<h1>Heading</h1>
+              				<p>Everti eleifend suavitate est at, adolescens instructior sea et. Ad hendrerit necessitatibus vix, sea sumo quando cu, ea nec oblique delectus. Ludus habemus in qui, nec delenit quaerendum ut.</p>
+			              
+			            </div>
+			          </div>  
+			      </div>
+
+		    	<div class="slide slide-feature"></div> 
+
+		    </div>
+
+		    <!--<div class="slider-nav">
+		      <a class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+		      <ul class="slider-dots">
+		        <li class="dot active-dot">&bull;</li>
+		        <li class="dot">&bull;</li>
+		      </ul>
+		      <a class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+		    </div> -->
+		    
+		</div>
+
+		<div class="list">
+			<div class="list-item">
+				<ul id="container">
+					<li><img src="img/img01.jpg">
+						<h1>Eripuit tacimates</h1>
+						<h2>Ne per affert gloriatur honestatis</h2>
+						<p>
+							Lorem ipsum dolor sit amet, ne nulla volutpat eam, sit euripidis democritum appellantur ad, solet persius urbanitas vim no.
+						</p>
+						<p>
+							Read More
+						</p>
+					</li>
+					<li><img src="img/img02.jpg">
+					<h1>Quodsi habemus</h1>
+						<h2>Ut mei copiosae accusamus </h2>
+						<p>
+							Everti eleifend suavitate est at, adolescens instructior sea et. Ad hendrerit necessitatibus vix, sea sumo quando cu, ea nec oblique delectus.
+						</p>
+						<p>
+							Read More
+						</p>
+					</li>
+					<li><img src="img/img02.jpg">
+					<h1>Quodsi habemus</h1>
+						<h2>Ut mei copiosae accusamus </h2>
+						<p>
+							Everti eleifend suavitate est at, adolescens instructior sea et. Ad hendrerit necessitatibus vix, sea sumo quando cu, ea nec oblique delectus.
+						</p>
+						<p>
+							Read More
+						</p>
+					</li>
+					<li><img src="img/img01.jpg">
+						<h1>Eripuit tacimates</h1>
+						<h2>Ne per affert gloriatur honestatis</h2>
+						<p>
+							Lorem ipsum dolor sit amet, ne nulla volutpat eam, sit euripidis democritum appellantur ad, solet persius urbanitas vim no.
+						</p>
+						<p>
+							Read More
+						</p>
+					</li>
+				<ul>
+			</div>
+		</div>
+
+
+		
+
+		<script src="app.js"></script>
+
+		<script>
+
+			var $container = $('#container');
+			// initialize
+			$container.masonry({
+			  columnWidth: 410,
+			  itemSelector: '.list-item ul li'
+			});
+
+			$container.imagesLoaded( function() {
+			  $container.masonry();
+			});
+
+		   $('#menu').click(function(){
+				$('nav ul li').toggle();
+			});
+	</script>
+	</body>
+</html>
