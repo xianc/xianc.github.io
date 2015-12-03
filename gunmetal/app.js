@@ -23,7 +23,7 @@ $(document).ready(function(){
 	$('.slider .slide:eq(0)').fadeIn(200);
 	$('#dots li:eq(0)').addClass('active-dot').fadeIn(200);
 
-	setInterval(function(){
+	var carouselTimer = setInterval(function(){
 		var curSlide=$('.active-slide');
 		var nxtSlide=curSlide.next();
 		var curDot=$('.active-dot');
@@ -40,7 +40,10 @@ $(document).ready(function(){
 		nxtDot.addClass('active-dot');
     },3000);
 
-	$('#dots li').click(function() {    
+	$('#dots li').click(function() {
+
+	    clearInterval(carouselTimer);
+	        
 	    var index = $(this).index();
 	    $('.active-slide').removeClass('active-slide').fadeOut(400);
 	    $('.slide:eq(' + index + ')').addClass('active-slide').fadeIn(400);

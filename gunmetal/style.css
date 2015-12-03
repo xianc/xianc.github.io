@@ -5,7 +5,7 @@
 
 /* General */
 body{
-    background: #4c4949;
+    background: #ccc;
     margin: 0;
     width: 100%;
 }
@@ -147,12 +147,13 @@ header{
 
 .item li img{
     width:100%;
-    transition:all .25s ease-in-out;
-    border:1px solid #121111;
+    transition:all .7s ease-in-out;
+    box-shadow: 0px 0px 10px #2f2f2f;
+    opacity:.7;
 }
 
 .item li img:hover{
-    box-shadow: 0px 0px 10px #2f2f2f;
+    opacity:1;
 }
 
 .hidden{
@@ -262,7 +263,7 @@ textarea{
 .submit:hover{
     border:3px solid #2f2f2f;
 }
-@media (max-width:1200px){
+@media (max-width:1280px){
     footer .wrap .summary{
         padding-right: 7%;
     }
@@ -273,7 +274,11 @@ textarea{
     }
 
 }
-@media (max-width:800px){
+@media (max-width:768px){
+    .container{
+        width: 100%;
+    }
+
     header a.hamburger{
         display: block;
     }
