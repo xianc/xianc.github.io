@@ -1,0 +1,236 @@
+<!-- 8/11 US WDP -->
+<style type="text/css">
+.dp-marketing{
+  width:828px;
+  margin:0 auto;
+}
+
+.floatR{
+  float:right;
+}
+.floatL{
+  float:left;
+}
+
+.marginTop20{
+  margin-top:20px;
+}
+
+.clear{
+  clear:both;
+}
+
+
+/*Carousel*/
+.wrapTab{
+  position: relative;
+  height:598px;
+  width:828px;
+  overflow: hidden;
+  border:1px solid #ccc;
+  border-top:0px;
+  display: block;
+}
+
+.slideHead{
+  position: relative;
+  height:151px;
+  width:828px;
+  border:1px solid #ccc;
+  display: block;
+}
+
+.slide{
+  position: absolute;
+  width:687px;
+  height:600px;
+  margin-top:-2px;
+}
+
+#t1{ left:0px; }
+#t2{ left:72px; }
+#t3{ left:144px; }
+
+.tab{
+  position: absolute;
+  width:71px;
+  height:600px;
+  border-right:1px solid #ccc;
+  cursor: pointer;
+  background-repeat:none;
+}
+
+#tab1{ background-image: url("assets/081115_WOM_DP_US1_1off.gif"); }
+#tab2{ background-image: url("assets/081115_WOM_DP_US1_2off.gif"); }
+#tab3{ background-image: url("assets/081115_WOM_DP_US1_3off.gif"); }
+
+.tabLink{ margin-left:71px;border-left: 1px solid #ccc;}
+
+</style>
+
+<div class="dp-marketing">
+
+
+    <div class="WMain">
+      <div class="slideHead">
+        <a href="http://www.gap.com/browse/category.do?cid=8792&scrollto=featuredoutfits" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_1');"><img src="assets/081115_WOM_DP_US1_HDR.gif"></a>
+      </div>
+      <div class="wrapTab">
+        <div id="t1" class="slide">
+          <div id="tab1" class="tab"></div>
+          <a href="http://www.gap.com/browse/category.do?cid=8792&scrollto=featuredoutfits" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_2');"><div id="tabLink1" class="tabLink" style="width:616px; height:600px;"></div></a>
+          </div>
+        <div id="t2" class="slide">
+          <div id="tab2" class="tab"></div>
+          <a href="http://www.gap.com/browse/category.do?cid=8792&scrollto=featuredoutfits" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_3');"><div id="tabLink2" class="tabLink" style="width:616px; height:600px;"></div></a>
+        </div>
+        <div id="t3" class="slide">
+          <div id="tab3" class="tab"></div>
+          <a href="http://www.gap.com/browse/category.do?cid=8792&scrollto=featuredoutfits" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_4');"><div id="tabLink3" class="tabLink" style="width:616px; height:600px;"></div></a>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="WSub1 marginTop20">
+    <a href="http://www.gap.com/browse/category.do?cid=34608" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_1_W');">
+      <img src="assets/081115_WOM_DP_US2.jpg" alt="shop tops">
+    </a>
+  </div>
+
+  <!--- body sub -->
+    <div class="WSub2 marginTop20 floatL">
+    <a href="http://www.gap.com/browse/category.do?cid=5664&scrollto=flare" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_2_W');">
+      <img src="assets/081115_WOM_DP_US3.jpg" alt="resolution jeans"></a>
+  </div>
+
+  <div class="WSub3 marginTop20 floatR">
+      <img src="assets/081115_WOM_DP_US4.jpg" alt="pants you need" usemap="#wSub2Map">
+      <map name="wSub2Map">
+        <area shape="rect" coords="0,0,176,620" href="/browse/category.do?cid=85615" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_3_W_1');"  alt="shop shoes" />
+        <area shape="rect" coords="175,0,404,620" href="/browse/category.do?cid=35300" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_3_W_2');"  alt="shop accessories" />
+      </map>
+  </div>
+  <br class="clear">
+
+  <div class="WSub4 marginTop20 marginBottom20">
+    <a href="http://www.gap.com/browse/category.do?cid=1027776" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_4_W');">
+      <img src="assets/081115_WOM_DP_US5.jpg" alt="shop pure body">
+    </a>
+  </div>
+
+  
+</div><!-- end dp-marketing-->
+
+
+<script src="assets/jquery.js"></script>
+<script>
+/* preload images for smoother initial transisions */
+$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
+
+$.preloadImages("assets/081115_WOM_DP_US1_1on.gif","assets/081115_WOM_DP_US1_1off.gif","assets/081115_WOM_DP_US1_1.jpg","assets/081115_WOM_DP_US1_1b.jpg","assets/081115_WOM_DP_US1_2on.gif","assets/081115_WOM_DP_US1_2off.gif","assets/081115_WOM_DP_US1_2.jpg","assets/081115_WOM_DP_US1_2b.jpg","assets/081115_WOM_DP_US1_3on.gif","assets/081115_WOM_DP_US1_3off.gif","assets/081115_WOM_DP_US1_3.jpg","assets/081115_WOM_DP_US1_3b.jpg");
+
+/* 8/11/15 W's DP Carousel */
+  var currentTab;
+  var count=0;
+  var nextTab;
+
+  $(document).ready(function(){
+    currentTab = $('.slide').first();
+    tabOpen("t1");
+
+    timer = setInterval(function(){ nextFunc(); },3000);
+
+    var nextFunc = function () {
+      if(count!=0){
+        currentTab=nextTab;
+      }
+
+      nextTab = currentTab.next();
+
+      if(nextTab.length === 0){
+        nextTab = $('.slide').first();
+      }
+     
+      tabOpen(currentTab.attr('id'));
+      count++;
+      
+    }
+  });
+
+
+  var tabOpen= function(tabID){
+    var id=tabID[1];
+
+    if(tabID=="t1"){
+      currentTab = currentTab.next();
+
+      $("#t2").animate({left: 687  }, function(){ 
+        tabClose("t2");  
+        $("#tab2").css({ "border-left": "1px solid #ccc"});  //compensating for some design inperfections
+      });
+      $("#t3").animate({left: 759  }, function(){ 
+        tabClose("t3");  
+        $("#tab3").css({ "border-left": "1px solid #ccc"});  //compensating for some design inperfections
+      });
+    }
+    
+    if(tabID=="t2"){
+      tabClose("t1");
+      $("#t2").animate({left: 72  });
+      $("#t3").animate({left: 759  }, function(){ 
+        tabClose("t3");  
+        $("#tab3").css({ "border-left": "1px solid #ccc"});  //compensating for some design inperfections
+      });
+    }
+    if(tabID=="t3"){
+      tabClose("t1");
+      tabClose("t2");
+      $("#t2").animate({left: 72  });
+      $("#t3").animate({left: 143  });
+    }
+
+    $("#tab"+id).css({ "background-image": "url('assets/081115_WOM_DP_US1_"+id+"on.gif')" });
+    $("#tabLink"+id).css({ "background-image": "url('assets/081115_WOM_DP_US1_"+id+".jpg')" });
+
+  };
+
+  var tabClose= function(tabID){
+      $('#'+tabID).children().first().animate({left: 0 });
+      var id=tabID[1];
+      $('#'+tabID).children().first().css({
+        "background-image": "url('assets/081115_WOM_DP_US1_"+id+"off.gif')",
+        "border-left":"0"
+      });
+      if(id!='3'){
+        $('#tabLink'+id).css({ "background-image": "url('assets/081115_WOM_DP_US1_"+id+"b.jpg')" });
+      }
+  };
+
+
+  $(".tab").click(function(){
+    tabOpen($(this).parent().attr('id'));
+    clearInterval(timer);
+  });
+
+
+
+  $(".tab").mouseenter(function() {
+    var tabID=$(this).parent().attr('id');
+    var id=tabID[1];
+    if(currentTab.attr('id')!=tabID)
+      $('#'+tabID).css({ "background-image": "url('assets/081115_WOM_DP_US1_"+id+"on.gif')" });
+  });
+  $(".tab").mouseleave(function() {
+    var tabID=$(this).parent().attr('id');
+    var id=tabID[1];
+    if(currentTab.attr('id')!=tabID)
+      $('#'+tabID).css({ "background-image": "url('assets/081115_WOM_DP_US1_"+id+"off.gif')" });
+  });
+
+</script>

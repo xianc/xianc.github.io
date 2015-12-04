@@ -1,0 +1,142 @@
+<style type="text/css">
+@font-face {
+    font-family: Haas65;
+    src: url(assets/HaasGrotDisp-65Medium.otf);
+}
+#WDP_11_10_Carousel{
+  width:100%;
+  max-width: 828px;
+  margin:0 auto;
+}
+.nav{
+	width: 122px;
+	float:left;
+	font-family: Haas65, Helvetica, Arial;
+}
+.slider{
+	width:706px;
+	float:left;
+	margin-top:10px;
+}
+.clear{
+	clear:both;
+}
+.day{
+	height:100px;
+	width:112px;
+	background-color:#ccc;
+	color:#fff;
+	text-align: center;
+	margin:10px 10px 0 0;
+	font-size: 5em;
+	padding-top:12px;
+}
+.day:hover{
+	color:#cb003c;
+	cursor: pointer;
+}
+
+.slide{
+	display:none;
+}
+.slide.active{
+	display:block;
+}
+.day.active{
+	background-color:#cb003c;
+}
+.day.active:hover{
+	background-color:#cb003c;
+	color:#fff;
+}
+</style>
+
+</head>
+<body>
+
+<div id="WDP_11_10_Carousel">
+	<img src="assets/111015_WOM_10Styles5Days_DP_US_HDR.gif">
+	<div class="nav">
+		<div class="day active" id="w">W</div>
+		<div class="day" id="th">Th</div>
+		<div class="day" id="f">F</div>
+		<div class="day" id="s">S</div>
+		<div class="day" id="su">Su</div>
+
+	</div>
+	<div class="slider">
+		<div class="slide active" id="slide_w"><img src="assets/111015_WOM_10Styles5Days_DP_US1_WED.jpg"></div>
+		<div class="slide" id="slide_th"><img src="assets/111015_WOM_10Styles5Days_DP_US1_THURS.jpg"></div>
+		<div class="slide" id="slide_f"><img src="assets/111015_WOM_10Styles5Days_DP_US1_FRI.jpg"></div>
+		<div class="slide" id="slide_s"><img src="assets/111015_WOM_10Styles5Days_DP_US1_SAT.jpg"></div>
+		<div class="slide" id="slide_su"><img src="assets/111015_WOM_10Styles5Days_DP_US1_SUN.jpg"></div>
+	</div>
+	<br class="clear">
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</body>
+</html>
+
+<script>
+	var wtimer = setInterval(function(){ 
+	    nextSlide(); 
+	},2000);
+
+	var nextSlide = function () {
+		var currentDay = $('.day.active');
+    	var nextDay = currentDay.next();
+    	// console.log("Current Day: " +currentDay.attr('id'));
+    	// console.log("Next Day: "+ nextDay.attr('id'));
+		var currentSlide = $('.slide.active');
+    	var nextSlide = currentSlide.next();
+    	// console.log("Current Day: " +currentSlide.attr('id'));
+    	// console.log("Next Day: "+ nextSlide.attr('id'));
+    	 if(nextDay.length === 0) {
+	        nextDay = $('.day').first();
+	        nextSlide = $('.slide').first();
+	     }
+	     
+	     currentDay.removeClass('active');
+	     nextDay.addClass('active'); 
+	     currentSlide.removeClass('active');
+	     nextSlide.addClass('active');
+     
+    };
+    var prevSlide = function () {
+    	var currentDay = $('.day.active');
+    	var prevDay = currentDay.prev()
+
+		var currentSlide = $('.slide.active');
+    	var prevSlide = currentSlide.prev();
+
+    	 if(prevDay.length === 0) {
+	        prevDay = $('.day').last();
+	        prevSlide = $('.slide').last();
+	     }
+	     
+	     currentDay.removeClass('active');
+	     prevDay.addClass('active'); 
+	     currentSlide.removeClass('active');
+	     prevSlide.addClass('active');
+     
+    }
+    $(".day").mouseenter(function() {
+        clearInterval(wtimer);
+    });
+    $(".day").click(function() {
+        clearInterval(wtimer);
+        $('.day.active').removeClass('active');
+        $('.slide.active').removeClass('active');
+
+        var dayID=$(this).attr('id');
+
+        $(this).addClass('active');
+        $('#slide_'+dayID).addClass('active');
+
+
+    });
+
+</script>

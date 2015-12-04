@@ -1,0 +1,257 @@
+<!-- GUP EUUK WDP1 -->
+<style type="text/css">
+.dp-marketing{
+  width:828px;
+  margin:0 auto;
+}
+.wDPWrapper{
+  position:relative;
+}
+.WSub{
+  margin-top: 50px;
+}
+
+.floatL{
+  float: left;
+}
+
+/*new slider*/
+.slider {
+  position: relative;
+  width: 826px;
+  height:1010px;
+}
+
+.slide {
+   background-size: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-slide {
+    display: block;
+}
+
+.clear{
+  clear:both;
+}
+
+
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+  position:absolute;
+  top:-800px;
+  left:103px;
+  cursor: pointer;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slider-dots li {
+  height: 8px;
+  width: 8px;
+  border: solid 1px #666666;
+  border-radius: 50%;
+  background-color: #fff;  
+  margin: 0 1px;
+  display:inline-block;
+  z-index: 4;
+  top: -18px;
+  right: 7px;
+  cursor: pointer;
+}
+
+.slider-nav {
+  position:absolute;
+  text-align: center;
+  top: 1010px;
+  left:360px;
+  z-index: 100;
+}
+
+.arrow-prev {
+  display: inline-block;
+  vertical-align: top;
+  position:absolute;
+  top:-800px;
+  left:-365px;
+  cursor: pointer;
+
+}
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+  position:absolute;
+  top:-800px;
+  left:390px;
+  cursor: pointer;
+}
+
+.slider-dots li.active-dot {
+  background-color: #666666; 
+}
+
+
+.dot{
+  left:40px;
+}
+
+.dp-marketing {
+  height: 1740px;
+}
+
+</style>
+
+<div class="dp-marketing">
+
+  <div class="wDPWrapper">
+
+    <div class="slider">
+      <div class="slide active-slide">
+          <img src="assets/060215_WOM_DIR_US1a.jpg" alt="pure simple chic white" usemap="#Map1" width="826px"/>
+      </div>
+      <div class="slide">
+          <img src="assets/060215_WOM_DIR_US1b.jpg" alt="pure simple chic black" usemap="#Map2" width="826px"/>
+      </div>
+    </div>
+
+    <map name="Map1" id="Map1">
+      <area shape="rect" coords="312,408,520,439" href="/browse/category.do?cid=13658" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_1_Dresses');" alt="shop dresses" />
+      <area shape="rect" coords="0,0,828,1010" href="/browse/category.do?cid=8792&scrollTo=blackWhiteMustHaves" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_1_ShopAll');" alt="shop black and white peices" />
+    </map>
+    <map name="Map2" id="Map2">
+      <area shape="rect" coords="312,408,520,439" href="/browse/category.do?cid=13658" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_2_Dresses');" alt="shop dresses" />
+      <area shape="rect" coords="0,0,828,1010" href="/browse/category.do?cid=8792&scrollTo=blackWhiteMustHaves" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Main_W_2_ShopAll');" alt="shop black and white peices" />
+    </map>
+
+     <div class="slider-nav"> <!--start nav dots-->
+        <ul class="slider-dots">
+          <li class="dot active-dot"></li>
+          <li class="dot"></li>
+        </ul>
+
+        <div id="carousel_W_DP_arrows"> <!-- start nav arrows-->
+          <a class="arrow-prev"><img class="carousel_W_DP_previous" src="assets/051215_WOM_DIR_US1_lftarrow.png" alt="previous" /> </a>
+          <a class="arrow-next"><img class="carousel_W_DP_next" src="assets/051215_WOM_DIR_US1_rtarrow.png" alt="next" /></a>
+        </div>
+      </div>
+    <br class="clear" />
+  </div>
+
+
+
+  <div class="WSub">
+    <div class="floatL">
+      <a href="http://gap.com/browse/category.do?cid=17076" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_1_W');">
+        <img src="assets/060215_WOM_DIR_US2.jpg">
+      </a>
+    </div>
+
+    <div class="floatR">
+      <img src="assets/060215_WOM_DIR_US3.jpg" alt="shop accessories" usemap="#Map3"/> 
+          <map name="Map3" id="Map3">
+            <area shape="rect" coords="56,191,188,223" href="/browse/category.do?cid=85615" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_2_W_1');" alt="shop shoes" />
+            <area shape="rect" coords="0,1,404,300" href="/browse/category.do?cid=35300" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_2_W_2');" alt="shop accessories" />
+          </map>
+    </div>
+    <br class="clear">
+
+    <div class="lounge" style="margin-top:20px;">
+      <a href="http://gap.com/browse/category.do?cid=1016012" onclick="return wcdLib.contentItemLinkWithFacet(this,'','DP_Sub_3_W');">
+        <img src="assets/060215_WOM_DIR_US4.jpg">
+      </a>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+<script src="assets/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+    var timer = setInterval(function(){ 
+      nextFunc();
+    },4500);
+
+    var nextFunc = function () {
+      var currentSlide = $('.active-slide');
+      var nextSlide = currentSlide.next();
+
+      var currentDot = $('.active-dot');
+      var nextDot = currentDot.next();
+
+      if(nextSlide.length === 0) {
+        nextSlide = $('.slide').first();
+        nextDot = $('.dot').first();
+      }
+      
+      currentSlide.fadeOut(600).removeClass('active-slide');
+      nextSlide.fadeIn(600).addClass('active-slide');
+
+      currentDot.removeClass('active-dot');
+      nextDot.addClass('active-dot');
+    }
+
+    var prevFunc = function () {
+      var currentSlide = $('.active-slide');
+      var prevSlide = currentSlide.prev();
+
+      var currentDot = $('.active-dot');
+      var prevDot = currentDot.prev();
+
+      if(prevSlide.length === 0) {
+        prevSlide = $('.slide').last();
+        prevDot = $('.dot').last();
+      }
+      
+      currentSlide.fadeOut(600).removeClass('active-slide');
+      prevSlide.fadeIn(600).addClass('active-slide');
+
+      currentDot.removeClass('active-dot');
+      prevDot.addClass('active-dot');
+    }
+
+    $('.arrow-next').click(function() {
+      nextFunc();
+      clearInterval(timer);
+    });
+
+    $('.arrow-prev').click(function() {
+      prevFunc();
+      clearInterval(timer);
+    });
+
+    $('ul li').click(function(){
+      var index=$(this).index();
+      $('.active-dot').removeClass('active-dot');
+      $('.active-slide').fadeOut(600).removeClass('active-slide');
+      $(this).addClass('active-dot');
+      $('.slide:eq('+index+')').fadeIn(600).addClass('active-slide');
+      clearInterval(timer);
+    })
+});
+
+
+</script>
