@@ -60,7 +60,7 @@ $(document).ready(function(){
         $('.hidden').each( function(i){
             
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() + 100;
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + 200;
             
             if( bottom_of_window > bottom_of_object ){
                 $(this).animate({'opacity':'1'},800);
