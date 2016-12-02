@@ -11,7 +11,7 @@ $(document).ready(function(){
 	function goToByScroll(id){
 	    id = id.replace("Link", "");
 	    $('html,body').animate({
-	        scrollTop: $("#"+id).offset().top},
+	        scrollTop: $("#"+id).offset().top-70},
 	        'slow');
 	}
 
@@ -56,6 +56,12 @@ $(document).ready(function(){
     
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
+    	// if($(window).scrollTop()>=70){
+    	// 	jQuery('header').addClass('stickyHeader');
+    	// }
+    	// else if($(window).scrollTop()<70){
+    	// 	jQuery('header').removeClass('stickyHeader');
+    	// }
     
         $('.hidden').each( function(i){
             

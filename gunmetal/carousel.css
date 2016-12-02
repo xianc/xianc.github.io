@@ -1,6 +1,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,400);
 
+.carousel{
+    margin-top:70px;
+}
 /*Slider*/
 .slider { 
     height:450px; 
@@ -13,9 +16,8 @@
     display:none; 
     background:grey; 
     position:absolute; 
-    width: 94%;
-    height: 94%;
-    padding: 3%;
+    width: 100%;
+    height: 100%;
     font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -24,6 +26,13 @@
     font-weight: normal;
     text-decoration: underline;
 }
+.first{
+    background: url('img/bg2.jpg') no-repeat bottom center;
+}
+
+.second{
+    background: url('img/bg.png') repeat;
+}
 
 .first, .second, .third, .fourth{
     background-size: cover;
@@ -31,13 +40,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-    .first{
-        background: url('img/bg2.jpg') no-repeat bottom center;
-    }
 
-    .second{
-        background: url('img/bg.png') repeat;
-    }
+.slideContentWrap{
+    padding:3%;
+}
 
 section nav{
     bottom:25px;

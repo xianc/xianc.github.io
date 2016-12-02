@@ -26,10 +26,16 @@ a:hover{
     color: #ec9600;
 }
 
+a.hamburger:hover{
+	color:#000;
+}
+
 
 /* Header */
 header{
-    width: 100%;
+	position:fixed;
+	top:0;
+	z-index: 10;
     height: 70px;
     background: #ec9600;
     font-family: 'Fjalla One', sans-serif;
@@ -284,8 +290,13 @@ textarea{
     }
 
 }
+@media (min-width:768px){
+	header{
+		width:90%;
+	}
+}
 @media (max-width:768px){
-    .container{
+    .container,header{
         width: 100%;
     }
 
