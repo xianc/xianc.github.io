@@ -4,7 +4,7 @@ body:after {
   display: none;
 }
 
-.iconsOverlay {
+.lightboxOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@ body:after {
   display: none;
 }
 
-.icons {
+.lightbox {
   position: absolute;
   left: 0;
   width: 100%;
@@ -25,7 +25,7 @@ body:after {
   font-weight: normal;
 }
 
-.icons .lb-image {
+.lightbox .lb-image {
   display: block;
   height: auto;
   max-width: inherit;
@@ -36,7 +36,7 @@ body:after {
   border-radius: 3px;
 }
 
-.icons a img {
+.lightbox a img {
   border: none;
 }
 
