@@ -1,3 +1,9 @@
+
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,400);
+
+.carousel{
+    margin-top:70px;
+}
 /*Slider*/
 .slider { 
     height:450px; 
@@ -12,6 +18,20 @@
     position:absolute; 
     width: 100%;
     height: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.slide a{
+    color:#2f2f2f;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.first{
+    background: url('img/bg2.jpg') no-repeat bottom center;
+}
+
+.second{
+    background: url('img/bg.png') repeat;
 }
 
 .first, .second, .third, .fourth{
@@ -20,17 +40,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-    .first{
-         background: url('http://thegreatsouthernbrainfart.com/wp-content/uploads/metal-wallpapers-15.jpg') no-repeat bottom center;
-    }
 
-    .second{
-        background: url('http://www.proshaper.com/wp-content/uploads/2013/06/metal_background_by_homers85-d53bo7t.jpg') no-repeat bottom center;
-    }
-
-    .third{
-        background: url('http://www.pageresource.com/wallpapers/wallpaper/black-metal-texture-resolution_1421878.jpg') no-repeat bottom center;
-    }
+.slideContentWrap{
+    padding:3%;
+}
 
 section nav{
     bottom:25px;
@@ -47,7 +60,7 @@ section nav li {
     display: inline-block;
     margin:0 7px; 
     padding: 7px;
-    border:2px solid #000;
+    border:2px solid #ec9600;
     background-color: #ec9600;
     border-radius: 10px;
     list-style: none;
@@ -55,11 +68,11 @@ section nav li {
 }
 
 section nav li:hover { 
-    border:2px solid #ec9600;
+    border:2px solid #000;
 }
 
 .active-dot{
-    border:2px solid #ec9600;
+    border:2px solid #000;
 }
 
 @media (max-width:500px){

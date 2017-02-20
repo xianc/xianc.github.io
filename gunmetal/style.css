@@ -1,6 +1,5 @@
 /* fonts */
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400,600);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,400);
 
 /* General */
@@ -27,10 +26,16 @@ a:hover{
     color: #ec9600;
 }
 
+a.hamburger:hover{
+	color:#000;
+}
+
 
 /* Header */
 header{
-    width: 100%;
+	position:fixed;
+	top:0;
+	z-index: 10;
     height: 70px;
     background: #ec9600;
     font-family: 'Fjalla One', sans-serif;
@@ -40,7 +45,7 @@ header{
         margin: 15px 20px;
         float: left;
         font-weight: bolder;
-        font-size: 25pt;
+        font-size: 35px;
         letter-spacing: 2px;
         text-transform: uppercase;
     }
@@ -90,16 +95,17 @@ header{
         display: none;
     }
 
+
 .content2, .content3, .content4{
     padding:8%;
+    font-family: 'Alegreya Sans', sans-serif;
     letter-spacing: 1px;
 }
 .content2{
     background-color: #2f2f2f;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 100;
     color:#d7d7d7;
     font-size: 16px;
+    font-weight: 100;
     line-height: 20px;
 }
 
@@ -120,6 +126,16 @@ header{
 .content3{ 
     background-color: #676565;
     padding-bottom: 10%;
+    color: #d7d7d7;
+}
+.content3 h1{
+    margin:2% 0;
+    font-size: 16px;
+}
+.content3 p.descrip{
+    font-size: 14px;
+    font-weight:lighter;
+    margin: 2%;
 }
 
 .item{
@@ -132,7 +148,7 @@ header{
     width:43%;
     float:left;
     min-height:150px;
-    margin-bottom:12%;
+    margin-bottom:6%;
     text-align: center;
     opacity:0;
 }
@@ -149,11 +165,11 @@ header{
     width:100%;
     transition:all .7s ease-in-out;
     box-shadow: 0px 0px 10px #2f2f2f;
-    opacity:.7;
+    opacity:1;
 }
 
 .item li img:hover{
-    opacity:1;
+    opacity:.7;
 }
 
 .hidden{
@@ -162,11 +178,11 @@ header{
 
 .content4{
     background-color: #ce8404;
-    font-family: 'Exo 2', sans-serif;
     font-weight: 600;
     font-size: 20px;
     color:#121111;
     letter-spacing: 1px;
+    line-height: 28px;
     text-align: center;
 }
 .clear { clear: both; }
@@ -274,8 +290,13 @@ textarea{
     }
 
 }
+@media (min-width:768px){
+	header{
+		width:90%;
+	}
+}
 @media (max-width:768px){
-    .container{
+    .container,header{
         width: 100%;
     }
 
