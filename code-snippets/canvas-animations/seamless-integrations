@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seamless Integrations Canvas Animation</title>
+  <style>
+    body{ margin:0; }
+    canvas {
+        border: 3px #CCC solid;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    .si-anim-wrapper{ display: inline-block; position:relative;}
+
+    .dot{
+      position: absolute;
+      border-radius: 5px;
+      display: none;
+      opacity: 0;
+    }
+
+    .dot1{
+      left: 44.3%;
+      top: 51.3%;
+      border: 3.5px solid #fff;
+      animation: dot-flash .5s infinite;
+      animation-delay: 0s;
+    }
+
+    .dot2{
+      left: 46.8%;
+      top: 46.65%;
+      border: 3.3px solid #fff;
+      animation: dot-flash .5s infinite;
+      animation-delay: .5s;
+    }
+
+    .dot3{
+      left: 49.04%;
+      top: 49.05%;
+      border: 3.3px solid #fff;
+      animation: dot-flash .5s infinite;
+      animation-delay: .3s;
+    }
+
+    .dot4{
+      left: 49.2%;
+      top: 53.6%;
+      border: 2.5px solid #fff;
+      animation: dot-flash .5s infinite;
+      animation-delay: .2s;
+    }
+
+    @keyframes dot-flash {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      41% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+   
+<body>
+  <div class="si-anim-wrapper">
+    <img src="images/seamless-integration.svg" style="width: 570px;">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+    <div class="dot dot4"></div>
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  var canvas = document.querySelector("canvas");
+  canvas.width=$('.si-anim-wrapper').innerWidth();
+  canvas.height=$('.si-anim-wrapper').innerHeight();
+  var c = canvas.getContext("2d");
+
+  var mouse = {
+    x: innerWidth/2,
+    y: innerHeight/2
+  }
+
+  var maxRadius = 40;
+  var minRadius = 2;
+  var friction = 0.99;
+  var colorArray=[
+    '#0075C9'
+  ];
+
+  var startPoints=Array(
+    { 
+      'id': 'sailthru',
+      'x': 118,
+      'y': 113
+    }, 
+    { 
+      'id': 'facebook',
+      'x': 118,
+      'y': 216
+    }, 
+    { 
+      'id': 'google-ad-words',
+      'x': 204,
+      'y': 15
+    }, 
+    { 
+      'id': 'send-grid',
+      'x': 204,
+      'y': 322
+    }
+  );
+
+  var endPoints=Array(
+    { 
+      'id': 'mparticle',
+      'x': 422,
+      'y': 113
+    }, 
+    { 
+      'id': 'mixpanel',
+      'x': 421,
+      'y': 217
+    }, 
+    { 
+      'id': 'braze',
+      'x': 331,
+      'y': 15 
+    }, 
+    { 
+      'id': 'amplitude',
+      'x': 331,
+      'y': 322
+    }
+  );
+
+  var funnel=Array(
+    { 
+      'id': 'in',
+      'startX': 204,
+      'startY': 174,
+      'endX': 233,
+      'endY': 174
+    },
+    { 
+      'id': 'out',
+      'startX': 303,
+      'startY': 174,
+      'endX': 331,
+      'endY': 174
+    }
+  );
+
+  var dotArray = [];
+
+  window.addEventListener('mousemove', function(event){ //event returns info on event
+      mouse.x = event.x;
+      mouse.y = event.y;
+  });
+
+  window.addEventListener('resize',
+    function(event){
+      canvas.width=$('.si-anim-wrapper').innerWidth();
+      canvas.height=$('.si-anim-wrapper').innerHeight();
+
+      init();
+  })
+
+  // window.addEventListener('click', function(){
+  //   init();
+  // })
+
+  //utility
+  function randomIntFromRange(min, max){
+    return Math.floor(Math.random()* (max-min+1)+min);
+  }    
+  function randomColor(colors){
+    return colors[Math.floor(Math.random()*colors.length)]
+  }
+
+ function Dot(x, y, radius, color){
+    this.x = x;
+    this.y = y;
+    // this.velocity = 2, 
+    this.radius = radius;
+    this.color = color;
+    this.colorSave = color;
+    this.processing = false;
+    this.processTime = 0;
+    this.pair;
+
+    this.draw = function(){
+      c.beginPath(); //separate this drawing from the last
+      c.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+      c.fillStyle = this.color;
+      c.fill();
+      // c.stroke();
+      c.closePath();
+    }
+
+    this.reset = function(){
+      // console.log('reset');
+      var randomNum = randomIntFromRange(0,3);
+      this.x = startPoints[randomNum].x;
+      this.y = startPoints[randomNum].y;
+      this.processTime = 0;
+      this.pair = undefined;
+    }
+
+    this.moveLeftDot = function(funnelStartX, funnelStartY, funnelEndX){
+      //if not at funnel move up/down
+      if(this.x==funnelStartX){
+        if(this.y<funnelStartY)
+          this.y += 1;
+        if(this.y>funnelStartY)
+          this.y -= 1;
+      } 
+
+      //if not at funnel more left right
+      if(this.x<funnelStartX)
+        this.x += 1;
+
+      //at funnel
+      if( this.y==funnelStartY && this.x<funnelEndX){
+        // console.log(funnel[0].endX, this.x)
+        this.x += 1; 
+
+        //make dissapear
+        if(this.x==funnelEndX){
+          this.color="rgba(255,255,255,0)";
+          this.x += 1;
+          this.processing = true;
+          $('.dot').show();
+          console.log('the dot is at the end of the left side');
+        }
+      }
+
+    }
+
+    this.moveRightDot = function(funnelStartX, funnelStartY, funnelEndX){
+      //at funnel move to end funnel
+      if(this.y==funnelStartY && this.x<funnelEndX)
+        this.x += 1; 
+      
+
+      if(this.x==funnelEndX && (this.x==this.pair.x || this.x<this.pair.x)){
+        if (this.y<this.pair.y)
+          this.y += 1;
+        if (this.y>this.pair.y)
+          this.y -= 1;
+      }
+
+      if(this.x<this.pair.x && this.y==this.pair.y)
+        this.x+=1;
+      if(this.x==this.pair.x && this.y==this.pair.y)
+        this.reset();
+    }
+
+
+    this.update = function(){
+
+      if(this.processing){
+        this.processTime+=1;
+        // console.log(this.processTime);
+      } 
+
+      if(this.processing && this.processTime==60){
+        // console.log("dot is processing", this.x)
+        this.x = funnel[1].startX;
+        this.color=this.colorSave;
+        this.processing = false;
+        this.side=1;
+        $('.dot').hide();
+
+        //go to a random service
+        var randService=randomIntFromRange(0, 3);
+        this.pair=endPoints[randService];
+
+        console.log("dot is processing done", this.x, endPoints[randService].id)
+      }
+
+      if(this.pair==undefined){
+        this.moveLeftDot(funnel[0].startX, funnel[0].startY, funnel[0].endX);
+      }
+      if(this.pair!=undefined){
+        this.moveRightDot(funnel[1].startX, funnel[1].startY, funnel[1].endX);
+      }
+
+      this.draw();
+    }
+  }
+
+  function init(){
+    dotArray = [];
+    for(var i=0; i<1; i++){
+      var x = startPoints[i].x;
+      var y = startPoints[i].y;
+      var color = randomColor(colorArray);
+
+      dotArray.push(new Dot(x, y, 5, color));
+    }
+  }
+
+  var spawnRate = 1500;
+  var lastSpawn = Date.now();
+
+  function animate(){
+    requestAnimationFrame(animate);
+    c.clearRect(0, 0, innerWidth, innerHeight); //clear  canvas
+
+    for(var i=0; i<dotArray.length; i++){
+      dotArray[i].update();
+    }
+
+    if(dotArray.length<4){
+      var time = Date.now();
+      if (time > (lastSpawn + spawnRate)) {
+        lastSpawn = time;
+        var x = startPoints[i].x;
+        var y = startPoints[i].y;
+        var color = randomColor(colorArray);
+
+        dotArray.push(new Dot(x, y, 5, color));
+      }
+    }
+
+  }
+
+  $( document ).ready(function() {
+    init();
+    animate();
+  });
+
+</script>
+
+</body>
+</html>
